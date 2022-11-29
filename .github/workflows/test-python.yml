@@ -24,4 +24,4 @@ jobs:
           python -m pytest
       - name: run pylint
         run: |
-          find . -name '*.py' -exec pylint {} /;
+          pylint $(git ls-files '*.py')
